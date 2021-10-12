@@ -27,7 +27,7 @@ function Resume() {
     const getBio = () => {
         fetch("/mybio")
         .then(res => res.json())
-        .then(fetchedBio => {console.log(fetchedBio)
+        .then(fetchedBio => {console.log(fetchedBio.image)
 
         setBios(fetchedBio)
 
@@ -128,6 +128,9 @@ function Resume() {
         <h1>Resume</h1>
         <div className="resume">
             <div className="resume_left">
+                <div class="resume_profile">
+                    <img src={bios.image} alt="profile_pic"></img>
+                </div>
                 <div className="resume_content">
                     <div className="resume_item resume_bio">
                         <div class="title">
@@ -155,7 +158,7 @@ function Resume() {
                             <li>
                             <FontAwesomeIcon class="icon" icon={faLink} />
                                     <div class="data">
-                                        <p>{bios.linkedin}</p>
+                                    <a href ={bios.linkedin}>linkedin </a>
                                     </div>
                             </li>
                         </ul>

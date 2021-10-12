@@ -1,6 +1,7 @@
 class CreateBios < ActiveRecord::Migration[6.1]
   def change
     create_table :bios do |t|
+      t.string :image
       t.string :name
       t.string :address
       t.string :phone

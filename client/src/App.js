@@ -13,6 +13,7 @@ import Education from "./Education";
 import Resume from "./Resume";
 import Account from './Account';
 
+
 function App() {
 
   const [user, setUser] = useState(null);

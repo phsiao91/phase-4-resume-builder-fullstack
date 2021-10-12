@@ -8,7 +8,7 @@ function Account({user}) {
 
     const updateName = (e) => {
         e.preventDefault()
-        fetch(`userupdate/${user.id}`, {
+        fetch(`/users/${user.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const handleDeleteUserAccount =(e)=> {
    
 
 
-    fetch(`/userdelete/${user.id}`, {
+    fetch(`/users/${user.id}`, {
 
       method: "DELETE"
 

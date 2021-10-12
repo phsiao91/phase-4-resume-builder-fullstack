@@ -27,9 +27,7 @@ function NavBar({ user, setUser }) {
               <Link to="/skills">Languages</Link>
               <Link to="resumes">Resume</Link>
               <Link to="accounts">Account</Link>
-              <Link to="/">
-                <button onClick={handleLogoutClick}>Logout</button>
-              </Link>
+              <Link to="/" onClick={handleLogoutClick}>Logout</Link>
             </>
           ) : (
             <>

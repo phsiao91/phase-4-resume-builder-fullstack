@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_10_05_142938) do
 
   create_table "bios", force: :cascade do |t|
+    t.string "image"
     t.string "name"
     t.string "address"
     t.string "phone"

@@ -22,6 +22,7 @@ function Bio() {
     const [phone, setPhone] = useState("")
     const [email, setEmail] = useState("")
     const [linkedin, setLinkedin] = useState("")
+    const [image, setImage] = useState("")
 
 
     function handleSubmit(e) {
@@ -34,6 +35,7 @@ function Bio() {
                 },
                 credentials: 'include',
                 body: JSON.stringify({
+                    image,
                     name,
                     address,
                     phone,
@@ -61,6 +63,12 @@ function Bio() {
         <div className="bioForm">
             <form onSubmit={handleSubmit}>
                 <h1>Bio</h1>
+                <label htmlFor="image">image</label>
+                    <input 
+                        type="text"
+                        name="image"
+                        value={image}
+                        onChange={(e) => setImage(e.target.value)}/>
                     <label htmlFor="name">name</label>
                     <input 
                         type="text"

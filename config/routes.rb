@@ -29,5 +29,6 @@ Rails.application.routes.draw do
   get "/myintro", to: "introductions#index"
   post "/educations", to: "educations#create"
   get "/myeducation", to: "educations#index"
+  # post "/myimage", to: "images#create"
 
 end
